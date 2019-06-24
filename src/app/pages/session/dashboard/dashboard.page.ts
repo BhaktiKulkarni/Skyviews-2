@@ -8,6 +8,9 @@ import { FIREBASE_CONFIG } from 'src/app/firebase.credentials';
 import { MAPBOX } from 'src/app/mapbox.credentials';
 import { Platform } from '@ionic/angular';
 
+// import * as  MapboxDirections from 'mapbox-gl-directions';
+//import { MapboxDirections } from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -33,7 +36,8 @@ export class DashboardPage implements OnInit {
     
     if(this.authService.userDetails()){
       this.userEmail = this.authService.userDetails().email;
-    }else{
+    }
+    else{
       this.navCtrl.navigateBack('');
     }
 
@@ -81,17 +85,21 @@ export class DashboardPage implements OnInit {
            credentials: 'include'  // Include cookies for cross-origin requests
          }
         }
-      }
+      },
     });
+
+    // this.map.addControl(new MapboxDirections({
+    //   accessToken: mapboxgl.accessToken
+    //   }), 'top-left');
 
     this.map.addControl(new mapboxgl.GeolocateControl({
       positionOptions: {
-      enableHighAccuracy: true
+       enableHighAccuracy: true
       },
-      trackUserLocation: true
+       trackUserLocation: true
       }));
  
-    console.log(this.map);
+    console.log('this.map: '+this.map);
   }
 }
 
