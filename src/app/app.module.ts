@@ -18,6 +18,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { MapService } from './map.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +33,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
      AngularFireAuthModule,
      AppRoutingModule],
   providers: [
+    MapService,
     AuthenticationService,
     StatusBar,
     SplashScreen,
