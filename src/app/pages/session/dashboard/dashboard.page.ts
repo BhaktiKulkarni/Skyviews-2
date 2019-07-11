@@ -118,10 +118,17 @@ export class DashboardPage implements OnInit {
 
         //get current location of user
       if ('geolocation' in navigator) {
-          navigator.geolocation.getCurrentPosition(position => { 
+          navigator.geolocation.getCurrentPosition(position => {
             this.lat = position.coords.latitude;
             this.lng = position.coords.longitude;
-            console.log(this.lat, this.lng); 
+            console.log('current location '+this.lat, this.lng); 
+            alert('current location '+ this.lat +' longitude' + this.lng);
+          });
+
+          navigator.geolocation.watchPosition(position => {
+            this.lat = position.coords.latitude;
+            this.lng = position.coords.longitude;
+            alert('watch '+ this.lat +' longitude'+ this.lng);
           });
         } else {
           alert('Provide access to fetch current location');

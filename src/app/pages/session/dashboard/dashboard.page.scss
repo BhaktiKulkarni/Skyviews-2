@@ -18,3 +18,12 @@
       cursor: pointer;
     }
 
+
+    .gradient{
+        --background: rgb(65,234,125);
+        --background: -moz-linear-gradient(-45deg, rgb(65,234,125) 18%, rgb(65,234,125) 39%, rgb(50,32,211) 98%);
+        --background: -webkit-linear-gradient(-45deg, rgb(65,234,125) 18%,rgb(65,234,125) 39%,rgb(50,32,211) 98%);
+        --background: linear-gradient(135deg, rgb(65,234,125) 18%,rgb(65,234,125) 39%,rgb(50,32,211) 98%);
+        --filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41ea7d', endColorstr='#3220d3',GradientType=1 );
+        --border-radius: 15px;
+    }
