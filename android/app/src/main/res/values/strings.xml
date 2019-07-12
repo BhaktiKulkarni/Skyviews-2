@@ -5,4 +5,5 @@
     <string name="package_name">io.ionic.starter</string>
     <string name="fileprovider_authority">io.ionic.starter.fileprovider</string>
     <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="access_token">pk.eyJ1IjoiYmhha3RpMTMxMiIsImEiOiJjandnOHoxMGgxZDR0NDRvdTZzMzBlNWZ3In0.fvWTP95eBg0TwY9kQTGWlw</string>
 </resources>
